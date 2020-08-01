@@ -1,22 +1,23 @@
 from difflib import SequenceMatcher
 
-def matchNucleobase(strand):
-    corrosponding={
-        "A": "T",
-        "T": "A",
-        "C": "G",
-        "G": "C"
-    }
+def checkNucleobase(base, RNA):
+    print(RNA)
 
-    return corrosponding.get(strand, "Invalid Nucleobase Base...")
+    if (not RNA or RNA == "unknown"):
+        possabilities = ["A", "C", "T", "G"]
+        for i in range(len(possabilities)):
+            if (base == possabilities[i]):
+                return True
+    else:
+        possabilities = ["A", "C", "U", "G"]
+        for i in range(len(possabilities)):
+            if (base == possabilities[i]):
+                return True
+
+    return False
 
 def reverseString(string):
     return string[::-1]
-
-def readFile(fileName):
-    file1 = open(fileName,"r")
-    print (file1.readlines())
-    file1.close()
 
 def similar(a, b):
     return SequenceMatcher(None, a, b).ratio()

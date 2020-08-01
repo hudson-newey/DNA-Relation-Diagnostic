@@ -8,12 +8,15 @@ class DNAMapper:
     
     def main():
         strandsCollection = []
+        sequnceTypes = []
 
         while (True):
-            currentStrand = Strand.create()
+
+            currentStrand, isRNA = Strand.create()
+
             if (currentStrand == "nill"):
                 # get final analysis
-                Strand.analyse(strandsCollection)
+                Strand.analyse(strandsCollection, sequnceTypes)
 
                 # let the user pause and read analysis
                 UI.pause()
@@ -21,6 +24,7 @@ class DNAMapper:
             else:
                 # add to total collection of DNA strands
                 strandsCollection.append(currentStrand)
+                sequnceTypes.append(isRNA)
 
 # call main class function
 DNAMapper()
