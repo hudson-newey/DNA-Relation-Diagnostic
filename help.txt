@@ -1,0 +1,8 @@
+DNA Mapper
+by, Grathium Industries
+
+1. To create a strand, begin by typing in your Nucleobase
+2. When finished, press the enter key with nothing typed
+
+Repeat this to create as many DNA sequences as you want.
+When you have created all your DNA sequences, press enter to see an analysis.
