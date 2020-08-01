@@ -1,3 +1,5 @@
+from difflib import SequenceMatcher
+
 def matchNucleobase(strand):
     corrosponding={
         "A": "T",
@@ -15,3 +17,6 @@ def readFile(fileName):
     file1 = open(fileName,"r")
     print (file1.readlines())
     file1.close()
+
+def similar(a, b):
+    return SequenceMatcher(None, a, b).ratio()

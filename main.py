@@ -4,7 +4,6 @@ from strand import *
 
 class DNAMapper:
     def __init__(self):
-        print("DNA Mapper\n")
         DNAMapper.main()
     
     def main():
