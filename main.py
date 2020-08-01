@@ -23,5 +23,5 @@ class DNAMapper:
                 # add to total collection of DNA strands
                 strandsCollection.append(currentStrand)
 
-# call main function
+# call main class function
 DNAMapper()

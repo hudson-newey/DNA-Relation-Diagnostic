@@ -2,7 +2,10 @@ DNA Mapper
 by, Grathium Industries
 
 1. To create a strand, begin by typing in your Nucleobase
-2. When finished, press the enter key with nothing typed
+2. When finished, press the enter key with nothing typed, this will create your first virtual DNA strand
 
-Repeat this to create as many DNA sequences as you want.
-When you have created all your DNA sequences, press enter to see an analysis.
+To begin analysis, press "n" when it asks to create a new DNA strand.
+This will show you a wide variety of options along with the corrosponding analysis data.
+
+
+THIS PROGRAM IS CURRENTLY A PROTOTYPE AND LACKING MANY FEATURES.
