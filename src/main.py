@@ -1,14 +1,34 @@
+import sys
+
 from fun import *
 from ui import *
 from strand import *
 
 class DNAMapper:
     def __init__(self):
-        DNAMapper.main()
+        if len(sys.argv) > 1:
+            DNAMapper.main_file()
+        else:
+            DNAMapper.main()
+    
+    def main_file():
+        sequenceTypes = []
+        strandsCollection = []
+
+        fileName = sys.argv[1]
+        
+        with open(fileName, 'r') as f:
+            for line in f:
+                adjustedLine = line.rstrip()
+                strandsCollection.append(str(adjustedLine))
+                sequenceTypes.append(False)
+        
+        Strand.analyse(strandsCollection, sequenceTypes)
+
     
     def main():
         strandsCollection = []
-        sequnceTypes = []
+        sequenceTypes = []
 
         while (True):
 
@@ -16,7 +36,7 @@ class DNAMapper:
 
             if (currentStrand == "nill"):
                 # get final analysis
-                Strand.analyse(strandsCollection, sequnceTypes)
+                Strand.analyse(strandsCollection, sequenceTypes)
 
                 # let the user pause and read analysis
                 UI.pause()
@@ -24,7 +44,7 @@ class DNAMapper:
             else:
                 # add to total collection of DNA strands
                 strandsCollection.append(currentStrand)
-                sequnceTypes.append(isRNA)
+                sequenceTypes.append(isRNA)
 
 # call main class function
 DNAMapper()

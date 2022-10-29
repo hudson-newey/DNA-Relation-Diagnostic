@@ -56,6 +56,6 @@ deactivate_python() {
 
 activate_python;
 
-python3 ./src/main.py;
+python3 ./src/main.py $1;
 
 deactivate_python;

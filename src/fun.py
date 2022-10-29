@@ -4,11 +4,13 @@ def checkNucleobase(base, RNA):
     print(RNA)
 
     if (not RNA or RNA == "unknown"):
+        # DNA strands
         possabilities = ["A", "C", "T", "G"]
         for i in range(len(possabilities)):
             if (base == possabilities[i]):
                 return True
     else:
+        # for RNA strands
         possabilities = ["A", "C", "U", "G"]
         for i in range(len(possabilities)):
             if (base == possabilities[i]):
