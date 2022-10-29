@@ -50,15 +50,15 @@ class Strand:
         for i in range(len(sequences)):
             # show sequences
             print("\n=====DNA Strand " + str(i) + "=====")
-            print("3\' " + sequences[i] + " 5\'")
+            print(f"3\' {sequences[i]} 5\'")
 
             # only print out if DNA
             if (not isRNA[i]):
-                print("5\' " + reverseString(sequences[i]) + " 3\'")
+                print(f"5\' {reverseString(sequences[i])} 3\'")
             print
 
             # compare to others
             for comparisonI in range(len(sequences)):
                 if (comparisonI == i): continue
                 similarity = similar(sequences[i], sequences[comparisonI]) * 100
-                print(str(similarity) + " percent similar to DNA Strand: " + str(comparisonI))
+                print(f"{str(similarity)} percent similar to DNA Strand: {str(comparisonI)}")
