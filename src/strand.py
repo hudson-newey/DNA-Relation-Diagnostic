@@ -34,16 +34,19 @@ class Strand:
 
             # UI output
             UI.clearScreen()
-            print(currentStrand) # 3' to 5'
+            print(f"3' {currentStrand} 5'") # 3' to 5'
 
             # don't print out corrosponding double helix strand if RNA
             if (not RNA or RNA == "unknown"):
-                print(currentStrand[::-1]) # 5' to 3'
+                fivePrime = currentStrand[::-1]
+                print(f"5' {fivePrime} 3'") # 5' to 3'
         
         # RETURN
 
         # assume strand is DNA
-        if (RNA == "unknown"): RNA = False
+        if (RNA == "unknown"):
+            RNA = False
+
         return currentStrand, RNA
     
     def analyse(sequences, isRNA):

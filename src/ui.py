@@ -8,6 +8,7 @@ class UI:
     def clearScreen():
         os.system("cls")
         os.system("clear")
-    
+
     def pause():
+        print("\nPress enter to continue...")
         input()
